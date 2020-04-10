@@ -54,25 +54,22 @@
     Verify elasticsearch status
     
     ```sh
-    kubectl get service quickstart-es-http
+    kubectl get service eckdemo-es-http
     ```
     
     Retrive elasticsearch secret
     
     ```sh
-    echo $(kubectl get secret quickstart-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode)
+    echo $(kubectl get secret eckdemo-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode)
     ```
 1. Create Kibana nodes
 
    ```sh
-   kubectl apply -f kibana-node.yaml
+   kubectl apply -f kibana-nodes.yaml
    ```
    Verify Kibana status
    
    ```sh
-   kubectl get service quickstart-kb-http
+   kubectl get service eckdemo-kb-http
    ```
-   
-   
-   
    
